@@ -121,14 +121,14 @@ Outputs only the minimum and maximum values (space-separated), useful for script
 ## 📁 Project Structure
 
 ```text
-python_scripts/
-├── script.py                    # Main entry point
-└── modules/                     # Core modules
-    ├── __init__.py             # Package initialization
-    ├── detail.py               # ANSI color formatting utilities
-    ├── parserBuilder.py        # CLI argument parser builder
-    ├── showBitRange.py         # Core range calculation logic
-    └── validatorForBit.py      # Input validation functions
+src/
+├── script.py                   - # Main entry point
+└── modules/                    - # Core modules
+    ├── __init__.py            -- # Package initialization
+    ├── detail.py              -- # ANSI color formatting utilities
+    ├── parserBuilder.py       -- # CLI argument parser builder
+    ├── showBitRange.py        -- # Core range calculation logic
+    └── validatorForBit.py     -- # Input validation functions
 ```
 
 ## Module Descriptions
