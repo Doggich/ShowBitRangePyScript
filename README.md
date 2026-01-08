@@ -1,4 +1,4 @@
-# Bit Range Calculator
+# ShowBitRangePyScript
 
 A Python command-line tool for calculating the numeric ranges of signed and unsigned integers based on bit length with beautiful ANSI-colored output.
 
@@ -6,7 +6,7 @@ A Python command-line tool for calculating the numeric ranges of signed and unsi
 
 ## 📋 Features
 
-* Bit Range Calculation: Calculate min/max values for signed and unsigned integers
+* ShowBitRangePyScript: Calculate min/max values for signed and unsigned integers
 * Multiple Output Formats: Simple, detailed, mathematical formula, and range-only formats
 * ANSI Color Support: Beautiful colored terminal output with customizable styles
 * Input Validation: Validates bit length constraints
@@ -33,8 +33,8 @@ A Python command-line tool for calculating the numeric ranges of signed and unsi
 1. Clone or download the project:
    
 ```bash
-git clone <repository-url>
-cd python_scripts
+git clone https://github.com/Doggich/ShowBitRangePyScript.git
+cd ShowBitRangePyScript
 ```
 
 2. The tool is ready to use - no external dependencies required!
@@ -159,4 +159,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👥 Authors
 
 [Doggich](https://github.com/Doggich)  - Initial work
-
