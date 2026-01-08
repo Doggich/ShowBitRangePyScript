@@ -1,4 +1,3 @@
-
 # ------------------------------  Once a year, and the stick shoots     [ UwU ]
 import sys
 import os
@@ -11,7 +10,46 @@ from modules.parserBuilder import buildArgParser
 from modules.showBitRange import showBitRangeForSignedInt, showBitRangeForUnsignedInt 
 
 def main() -> None:
-    """Main program function."""
+    """
+    Main entry point for the Bit Range Calculator application.
+
+    ### This function orchestrates the entire program flow:
+    1. Parses command-line arguments to get user input
+    2. Calculates the integer range based on bit length and integer type
+    3. Formats and displays the results using ANSI-colored output
+    4. Handles errors and provides user-friendly error messages
+
+    ### The program supports four output formats:
+    - 'simple': Basic range information (minimum and maximum values)
+    - 'detailed': Comprehensive information including formula, binary representation, and total values
+    - 'math': Only the mathematical formula describing the range
+    - 'range': Only the numerical range values (space-separated, useful for scripting)
+
+    ### Workflow:
+        1. Parse command-line arguments using buildArgParser()
+        2. Validate input and calculate ranges using showBitRangeFor* functions
+        3. Format output according to the specified format using ascii_format()
+        4. Display results to the user
+
+    ### Error Handling:
+        - ValueError: Handles invalid bit counts or other input validation errors
+        - Exception: Catches any unexpected errors and displays them gracefully
+
+    ### Environment Requirements:
+        - Terminal with ANSI color support for optimal display
+        - Python 3.6 or higher (for f-string support)
+        - Proper module structure with 'modules' directory
+
+    ### Note:
+        This function is designed to be called as the main entry point when
+        the script is executed directly (via __name__ == "__main__").
+
+    ### See Also:
+        buildArgParser: For command-line argument parsing details
+        showBitRangeForSignedInt: For signed integer range calculations
+        showBitRangeForUnsignedInt: For unsigned integer range calculations
+        ascii_format: For ANSI-colored text formatting
+    """
     parser = buildArgParser()
     args = parser.parse_args() 
     int_type = args.int_type 
