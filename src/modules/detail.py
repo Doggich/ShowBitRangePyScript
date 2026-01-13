@@ -1,3 +1,5 @@
+from utils.color import FG, BG, Style
+
 class Text:
     class Font:
         Black = "\033[30m"
@@ -70,22 +72,22 @@ def ascii_format(text: str, *styles: str) -> str:
         The formatted text with ANSI escape codes.
     """
     style_codes = {
-        "bold": Text.Tool.Bold,
-        "italic": Text.Tool.Cursive,
-        "underline": Text.Tool.Underline,
-        "strike": Text.Tool.Strike,
-        "red": Text.Font.Red,
-        "green": Text.Font.Green,
-        "blue": Text.Font.Blue,
-        "yellow": Text.Font.Yellow,
-        "magenta": Text.Font.Magenta,
-        "cyan": Text.Font.Cyan,
-        "black": Text.Font.Black,
-        "white": Text.Font.White,
-        "formula": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Magenta,
-        "numeric_value": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Green,
-        "binary_value": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Yellow,
-        "total": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Blue,
+        "bold": Style.BOLD,
+        "italic": Style.ITALIC,
+        "underline": Style.UNDERLINE,
+        "strike": Style.STRIKETHROUGH,
+        "red": FG.RED,
+        "green": FG.GREEN,
+        "blue": FG.BLUE,
+        "yellow": FG.YELLOW,
+        "magenta": FG.MAGENTA,
+        "cyan": FG.CYAN,
+        "black": FG.BLACK,
+        "white": FG.WHITE,
+        "formula": Style.BOLD + Style.ITALIC + FG.MAGENTA,
+        "numeric_value": Style.BOLD + Style.ITALIC + FG.GREEN,
+        "binary_value": Style.BOLD + Style.ITALIC + FG.YELLOW,
+        "total": Style.BOLD + Style.ITALIC + FG.BLUE,
 
     }
     
