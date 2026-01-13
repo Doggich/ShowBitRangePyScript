@@ -91,7 +91,19 @@ class Color:
     
     @classmethod
     def RGBBack(cls, *args: Union[int, Tuple[int, int, int]]) -> str:
-        """Create ANSI escape code for RGB background color."""
+        """Create ANSI escape code for RGB background color.
+        
+        Usage:
+            Color.RGBBack(255, 0, 0)           # Red
+            Color.RGBBack((255, 0, 0))         # Also red
+            Color.RGBBack(255, g=0, b=0)       # Keyword args (Python 3.8+)
+        
+        Args:
+            *args: Either three ints or a single tuple of three ints
+        
+        Returns:
+            ANSI escape code for 24-bit RGB text color
+        """
         if len(args) == 1 and isinstance(args[0], tuple):
             r, g, b = args[0]
         elif len(args) == 3:
@@ -104,10 +116,22 @@ class Color:
     
     @staticmethod
     def invertRGB(r: int, g: int, b: int) -> Tuple[int, int, int]:
-        """Invert RGB color."""
+        """
+        Invert an RGB color (complement in RGB color space).
+        
+        ### Args:
+            r: Red (0-255)
+            g: Green (0-255)
+            b: Blue (0-255)
+        
+        ### Returns:
+            Inverted color as (255-r, 255-g, 255-b)
+        
+        ### Example:
+            Color.invertRGB(255, 0, 0)  # Returns (0, 255, 255) (red → cyan)
+        """
+        if not all(0 <= x <= 255 for x in (r, g, b)):
+            raise ValueError("RGB values must be in range 0-255")
+            
         return (255 - r, 255 - g, 255 - b)
 
-
-
-
-    

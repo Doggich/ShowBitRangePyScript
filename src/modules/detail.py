@@ -1,49 +1,5 @@
 from utils.color import FG, BG, Style
 
-class Text:
-    class Font:
-        Black = "\033[30m"
-        Red = "\033[31m"
-        Green = "\033[32m"
-        Yellow = "\033[33m"
-        Blue = "\033[34m"
-        Magenta = "\033[35m"
-        Cyan = "\033[36m"
-        White = "\033[37m"
-        Bright_black = "\033[90m"
-        Bright_red = "\033[91m"
-        Bright_green = "\033[92m"
-        Bright_yellow = "\033[93m"
-        Bright_blue = "\033[94m"
-        Bright_magenta = "\033[95m"
-        Bright_cyan = "\033[96m"
-
-    class Back:
-        Black = "\033[40m"
-        Red = "\033[41m"
-        Green = "\033[42m"
-        Yellow = "\033[43m"
-        Blue = "\033[44m"
-        Magenta = "\033[45m"
-        Cyan = "\033[46m"
-        White = "\033[47m"
-        Bright_black = "\033[100m"
-        Bright_red = "\033[101m"
-        Bright_green = "\033[102m"
-        Bright_yellow = "\033[103m"
-        Bright_blue = "\033[104m"
-        Bright_magenta = "\033[105m"
-        Bright_cyan = "\033[106m"
-
-    class Tool:
-        Flush = "\033[0m"
-        Bold = "\033[1m"
-        Cursive = "\033[3m"
-        Underline = "\033[4m"
-        Strike = "\033[9m"
-        Dual_underline = "\033[21m"
-
-
 def ascii_format(text: str, *styles: str) -> str:
     """
     Apply ANSI styles to text.
