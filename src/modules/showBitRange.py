@@ -71,8 +71,8 @@ def showBitRangeForUnsignedInt(bit: int) -> Tuple[str, Tuple[int, int]]:
         showBitRangeForSignedInt: For calculating ranges of signed integers.
         validate_bit: For input validation.
     """
-    # For unsigned int, 2 bit is sufficient
-    validate_bit(bit=bit, min_bit=2, max_bit=1024)
+    # For unsigned int, 1 bit is sufficient
+    validate_bit(bit=bit, min_bit=1, max_bit=1024)
 
     math_formula: str = f"[0 to 2^{bit} - 1]"
     min_number_from_range: int = 0 

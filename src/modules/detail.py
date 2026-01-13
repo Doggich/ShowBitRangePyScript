@@ -81,7 +81,12 @@ def ascii_format(text: str, *styles: str) -> str:
         "magenta": Text.Font.Magenta,
         "cyan": Text.Font.Cyan,
         "black": Text.Font.Black,
-        "white": Text.Font.White
+        "white": Text.Font.White,
+        "formula": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Magenta,
+        "numeric_value": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Green,
+        "binary_value": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Yellow,
+        "total": Text.Tool.Bold + Text.Tool.Cursive + Text.Font.Blue,
+
     }
     
     tags = "".join(style_codes.get(style, "") for style in styles)

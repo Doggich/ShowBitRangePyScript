@@ -71,14 +71,14 @@ def main() -> None:
             bin_min_value = f"{min_val:b}"
             bin_max_value = f"{max_val:b}"
             print(f"{ascii_format(int_type.upper(), 'bold', 'italic', 'underline')} {ascii_format(str(number), 'bold', 'italic', 'underline')}-bit Integer")
-            print(f"Formula: {ascii_format(description, 'bold', 'italic', 'magenta')}")
-            print(f"Range: {ascii_format(str(min_val), 'bold', 'italic', 'green')} to {ascii_format(str(max_val), 'bold', 'italic', 'green')}")
+            print(f"Formula: {ascii_format(description, "formula")}")
+            print(f"Range: {ascii_format(str(min_val), 'numeric_value')} to {ascii_format(str(max_val), 'numeric_value')}")
             print(f"Total values: {ascii_format(str(total_values), 'bold', 'italic', 'blue')}")
-            print(f"Binary: {ascii_format(bin_min_value, 'bold', 'italic', 'yellow')} to {ascii_format(bin_max_value, 'bold', 'italic', 'yellow')}")
+            print(f"Binary: {ascii_format(bin_min_value, 'binary_value')} to {ascii_format(bin_max_value, 'binary_value')}")
         elif args.format == "math":
-            print(ascii_format(description, 'bold', 'italic', 'magenta'))
+            print(ascii_format(description, 'formula'))
         elif args.format == "range":
-            print(f"{ascii_format(str(min_val), 'bold', 'italic', 'green')} {ascii_format(str(max_val), 'bold', 'italic', 'green')}")
+            print(f"{ascii_format(str(min_val), 'numeric_value')} {ascii_format(str(max_val), 'numeric_value')}")
             
     except ValueError as e:
         print(f"Error: {e}")
