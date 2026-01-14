@@ -5,9 +5,9 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # ------------------------------
 
-from modules.detail import ascii_format
-from modules.parserBuilder import buildArgParser
-from modules.showBitRange import showBitRangeForSignedInt, showBitRangeForUnsignedInt 
+from utils.format import ascii_format
+from modules.argsParser import buildArgParser
+from modules.showBitRange import ShowIntBitRange
 
 def main() -> None:
     """
@@ -57,9 +57,11 @@ def main() -> None:
     
     try:
         if int_type == "signed":
-            description, (min_val, max_val) = showBitRangeForSignedInt(number)
+            temp: ShowIntBitRange = ShowIntBitRange(int_type='signed', bit=number)
+            description, (min_val, max_val) = temp.get_info()
         else:
-            description, (min_val, max_val) = showBitRangeForUnsignedInt(number)
+            temp: ShowIntBitRange = ShowIntBitRange(int_type='unsigned', bit=number)
+            description, (min_val, max_val) = temp.get_info()
         
         # Using the format argument
         if args.format == "simple":
