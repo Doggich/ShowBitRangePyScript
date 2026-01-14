@@ -54,6 +54,7 @@ class Style:
     STRIKETHROUGH: Final[str] = "\033[9m"
     DOUBLE_UNDERLINE: Final[str] = "\033[21m"
 
+
 class Color:
     """ANSI color utilities with RGB support."""
     
